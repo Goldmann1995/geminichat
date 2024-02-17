@@ -7,6 +7,23 @@ import random
 from utils import SAFETY_SETTTINGS
 
 
+# 设置用户名和密码
+username = "admin"
+password = "password"
+
+# 创建登录表单
+form = st.form("login_form")
+username_input = form.text_input("用户名")
+password_input = form.text_input("密码", type="password")
+submit_button = form.form_submit_button("登录")
+
+# 验证用户名和密码
+if submit_button:
+    if username_input == username and password_input == password:
+        st.success("登录成功！")
+    else:
+        st.error("用户名或密码错误！")
+
 st.set_page_config(
     page_title="Chat To XYthing",
     page_icon="🔥",
