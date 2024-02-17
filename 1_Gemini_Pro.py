@@ -21,9 +21,8 @@ st.caption("a chatbot, powered by google gemini pro.")
 
 if "app_key" not in st.session_state:
     # app_key = st.text_input("Your Gemini App Key", type='password')
-    app_key = "AIzaSyAU8RxYbB6FGA3Ovrl4SL_goC8bj2WVsfo"
-    if app_key:
-        st.session_state.app_key = app_key
+    # if app_key:
+    st.session_state.app_key = "AIzaSyAU8RxYbB6FGA3Ovrl4SL_goC8bj2WVsfo"
 
 if "history" not in st.session_state:
     st.session_state.history = []
