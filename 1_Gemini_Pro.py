@@ -11,19 +11,6 @@ from utils import SAFETY_SETTTINGS
 username = "admin"
 password = "password"
 
-# 创建登录表单
-form = st.form("login_form")
-username_input = form.text_input("用户名")
-password_input = form.text_input("密码", type="password")
-submit_button = form.form_submit_button("登录")
-
-# 验证用户名和密码
-if submit_button:
-    if username_input == username and password_input == password:
-        st.success("登录成功！")
-    else:
-        st.error("用户名或密码错误！")
-
 st.set_page_config(
     page_title="Chat To XYthing",
     page_icon="🔥",
@@ -39,7 +26,20 @@ st.caption("a chatbot, powered by google gemini pro.")
 if "app_key" not in st.session_state:
     # app_key = st.text_input("Your Gemini App Key", type='password')
     # if app_key:
-    st.session_state.app_key = "AIzaSyAU8RxYbB6FGA3Ovrl4SL_goC8bj2WVsfo"
+# 创建登录表单
+    form = st.form("login_form")
+    username_input = form.text_input("用户名")
+    password_input = form.text_input("密码", type="password")
+    submit_button = form.form_submit_button("登录")
+
+    # 验证用户名和密码
+    if submit_button:
+        if username_input == username and password_input == password:
+            st.success("登录成功！")
+            st.session_state.app_key = "AIzaSyAU8RxYbB6FGA3Ovrl4SL_goC8bj2WVsfo"
+        else:
+            st.error("用户名或密码错误！")
+
 
 if "history" not in st.session_state:
     st.session_state.history = []
