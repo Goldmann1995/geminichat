@@ -16,7 +16,7 @@ st.set_page_config(
     page_icon="🔥",
     menu_items={
         'About': "# Make By hiliuxg"
-    }
+    },
     layout="wide"
 )
 
