@@ -10,7 +10,8 @@ st.set_page_config(
     page_icon="🔥",
     menu_items={
         'About': "# Make by hiliuxg"
-    }
+    },
+    layout="wide"
 )
 
 st.title('Upload Image And Ask')

@@ -17,6 +17,7 @@ st.set_page_config(
     menu_items={
         'About': "# Make By hiliuxg"
     }
+    layout="wide"
 )
 
 st.title("Chat To XYthing")
