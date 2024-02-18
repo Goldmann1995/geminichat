@@ -12,15 +12,16 @@ username = "admin"
 password = "password"
 
 st.set_page_config(
-    page_title="Chat To XYthing",
+    page_title="Gemini Pro Chat",
     page_icon="🔥",
     menu_items={
-        'About': "# Make By hiliuxg"
+        'About': "# Make By Goldmann"
     },
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="auto"
 )
 
-st.title("Chat To XYthing")
+st.title("Gemini Pro Chat")
 st.caption("a chatbot, powered by google gemini pro.")
 
 
